@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { awards, bio, books, britMagazine, siteInfo } from "@/data/site";
+import FeaturedVideos from "@/components/FeaturedVideos";
 
 export default function Home() {
   const featuredBooks = books.slice(0, 3);
@@ -154,6 +155,27 @@ export default function Home() {
               עוד על מפעל המחקר והתיעוד
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Featured videos */}
+      <section className="mx-auto max-w-5xl px-6 py-20">
+        <div className="mb-12 text-center">
+          <h2 className="font-display text-2xl font-bold text-gold-300 sm:text-3xl">
+            סרטונים נבחרים
+          </h2>
+          <p className="mt-3 text-sepia-300">מתוך אירועי ההוקרה והתיעוד</p>
+        </div>
+
+        <FeaturedVideos />
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/videos"
+            className="rounded-full border border-gold-400/50 px-8 py-3 text-sm text-gold-300 transition-colors hover:bg-gold-400/10"
+          >
+            כל הסרטונים
+          </Link>
         </div>
       </section>
 
