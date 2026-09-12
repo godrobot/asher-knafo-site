@@ -104,6 +104,14 @@ export type Book = {
   description: string;
   // Real scanned book-cover image, where the family archive has one.
   cover?: string;
+  // The following are optional, real, sourced extra facts — shown only in
+  // the book modal (not the list card) — drawn from Asher Knafo's own
+  // bibliography and CV, and from published reviews. Left undefined where
+  // no additional real material was found.
+  publisher?: string;
+  edition?: string;
+  adaptations?: string;
+  reviewQuotes?: { text: string; author: string; source?: string }[];
 };
 
 // Asher Knafo's original literary works (novels, memoir, humor, novellas, research).
@@ -117,6 +125,7 @@ export const books: Book[] = [
     cover: "/images/covers/hakinor-veani.jpg",
     description:
       "שילוב ייחודי בין מֵמוּאָר, אוטוביוגרפיה ויומן מסע, המתאר את המסע שערך אשר מילדותו במרוקו אל מדינת ישראל הצעירה. הכינור משמש כאלגוריה לדבר הנכסף שלא הושג — התקווה, הכמיהה, האכזבה וההתחדשות של דור שלם שעזב את מרוקו והגיע לארץ הקודש.",
+    publisher: "בימת קדם",
   },
   {
     slug: "hatinok-meoufran",
@@ -126,6 +135,10 @@ export const books: Book[] = [
     cover: "/images/covers/hatinok-meoufran.jpg",
     description:
       "רומן המבוסס על אירוע היסטורי — קהילה יהודית באופראן שמעדיפה למות ולא להמיר את דתה לאסלאם. הספר זכה להצלחה גדולה והודפס בארבע מהדורות, תורגם לצרפתית (2012) ולערבית מוגרבית באוניברסיטת אגדיר (2015) — הספר העברי היחיד מישראל שתורגם ופורסם במרוקו. מתוכו הופקו שני מחזות וחוברת עבודה של משרד החינוך בנושאי מנהיגות ודילמות מוסריות.",
+    publisher: "בימת קדם",
+    edition: "המהדורה הצרפתית ראתה אור בהוצאת L'Harmattan (2012)",
+    adaptations:
+      "עלה כ\"תיאטרון ספרותי\" בתיאטרון \"בימת קדם\" (2002), ולאחר מכן כמחזה \"אופראן\" בהצגת התיאטרון היהודי (2005).",
   },
   {
     slug: "chatuna-bemogador",
@@ -135,6 +148,9 @@ export const books: Book[] = [
     cover: "/images/covers/chatuna-bemogador.jpg",
     description:
       "אלבום כתובות שהופק בשיתוף עם דוד בן-שושן מקנדה, ובו שמונים ושלוש כתובות מאוירות מרבי דוד אלקיים, יצחק קנפו ואחרים, לצד פואמה גדולה מאת אשר כנפו על מנהגי החתונה במוגדור. הפואמה הועלתה כמופע מוזיקלי עם התזמורת האנדלוסית הישראלית וזכתה להצלחה גדולה.",
+    publisher: "בימת קדם",
+    adaptations:
+      "התזמורת האנדלוסית הישראלית העלתה את היצירה כמחזמר בשנת 2009, ואף קדמה לכך ביקורת על המופע בעיתון \"הארץ\" (2006).",
   },
   {
     slug: "hapaytan-hashatkan",
@@ -144,6 +160,7 @@ export const books: Book[] = [
     cover: "/images/covers/hapaytan-hashatkan.jpg",
     description:
       "רומן פיקרסקי על המתח שבין אהבת מרוקו לציונות המוקדמת בקהילה היהודית-מרוקאית.",
+    publisher: "בימת קדם",
   },
   {
     slug: "yachin",
@@ -152,6 +169,7 @@ export const books: Book[] = [
     genre: "עריכה ומחקר",
     description:
       "כרך שערך אשר כנפו, ובו שמונה־עשר חוקרים דנים באספקטים שונים במחשבתו של רבי יוסף כנאפו — הרב שהחדיר את עקרונות התנועה החסידית למרוקו וממנו צאצא אשר עצמו.",
+    publisher: "אות ברית קודש",
   },
   {
     slug: "hazan-beveit-hamerchatz",
@@ -161,6 +179,9 @@ export const books: Book[] = [
     cover: "/images/covers/hazan-beveit-hamerchatz.jpg",
     description:
       "חמישים ושניים סיפורים מחורזים עם איורים של אמן הצלליות אלברט אלמוזנינו, המביאים לחיים את אמנות הסיפור העממי המרוקאי. מתוך הספר הופק חזיון מוזיקלי של התזמורת האנדלוסית, \"בהומור ופיוט\", וההצגה \"תצחקו ותסעדו\" בבימויו של יצחק גורן.",
+    publisher: "בימת קדם",
+    adaptations:
+      "בשנת 2013 הוקדש לספר פרק בפרויקט התיעודי \"סופרים קוראים\", לצד החזיון המוזיקלי וההצגה שכבר הופקו מתוכו.",
   },
   {
     slug: "te-im-nana",
@@ -170,6 +191,7 @@ export const books: Book[] = [
     cover: "/images/covers/te-im-nana.jpg",
     description:
       "יותר מחמש מאות סיפורים קצרים המתעדים את ההומור היהודי-מרוקאי, לצד מאמר על אופיו הייחודי של הומור זה. שמו של הספר נלקח מבדיחה ששמע אשר כנפו מידיד. מלווה בשבעים ושלושה איורים מרהיבים מאת חי כנפו.",
+    publisher: "בימת קדם",
   },
   {
     slug: "geshem-nedavot",
@@ -178,6 +200,7 @@ export const books: Book[] = [
     genre: "קובץ נובלות",
     description:
       "קובץ של עשר נובלות, המשך למפעלו הספרותי של אשר כנפו בתיעוד עולמם הפנימי ודמויותיה של יהדות מרוקו.",
+    publisher: "בימת קדם",
   },
   {
     slug: "neshimato-haacharona",
@@ -186,6 +209,7 @@ export const books: Book[] = [
     genre: "רומן",
     description:
       "רומן המזמין את הקורא לטייל ברחובות מוגדור ולחוות איתה שעות ותמורות בחייה — המשכו הטבעי של סיפור העיר שאשר כנפו מגולל מספר לספר, מ\"התינוק מאופראן\" ועד הנה.",
+    publisher: "בימת קדם",
   },
   {
     slug: "shirat-haavanim",
@@ -194,6 +218,18 @@ export const books: Book[] = [
     genre: "מחקר ותיעוד שירה (עם ד״ר שלום אלדר)",
     description:
       "מפעל מחקר מונומנטלי בן כשבע שנות עבודה, שערך אשר כנפו עם ד\"ר שלום אלדר: פענוח, תיעוד ופרשנות של מאות פיוטים וקינות שחרתו משוררי מוגדור — ובראשם רבי דוד אלקיים — על מצבות בתי העלמין היהודיים בעיר. הספר, שיצא בהוצאת \"בימת קדם\" ומונה כ-700 עמודים, חושף אוצר שירה עברית ייחודי שאין דומה לו בקהילות אחרות במרוקו.",
+    reviewQuotes: [
+      {
+        text: "מלאכת מחשבת – עבודה רבת השראה בידי אומן מחונן ומבורך... מאחוריו של אשר לא עמד מוסד ממלכתי או ציבורי – אשר הוא היוזם והוא המבצע.",
+        author: "פרופ' שלמה אלקיים",
+        source: "מתוך ביקורתו האקדמית על \"שירת האבנים\"",
+      },
+      {
+        text: "מונומנט חי... יצירתו מרשימה, ומעידה על גאוניות של שושלת שאינה מניחה תחום כלשהו בלי לחקור אותו ולשאוף למצוינות בו.",
+        author: "אמי בוגנים",
+        source: "מתוך רשימתו על אשר כנפו, 2025",
+      },
+    ],
   },
 ];
 

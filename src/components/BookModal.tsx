@@ -59,6 +59,48 @@ export default function BookModal({
           <p className="text-base leading-8 text-sepia-200">
             {book.description}
           </p>
+
+          {book.publisher || book.edition ? (
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-1 border-t border-gold-400/15 pt-4 text-sm text-sepia-400">
+              {book.publisher ? (
+                <p>
+                  <span className="text-sepia-500">הוצאה: </span>
+                  {book.publisher}
+                </p>
+              ) : null}
+              {book.edition ? (
+                <p>
+                  <span className="text-sepia-500">מהדורות: </span>
+                  {book.edition}
+                </p>
+              ) : null}
+            </div>
+          ) : null}
+
+          {book.adaptations ? (
+            <p className="mt-3 text-sm leading-7 text-sepia-300">
+              {book.adaptations}
+            </p>
+          ) : null}
+
+          {book.reviewQuotes && book.reviewQuotes.length > 0 ? (
+            <div className="mt-6 space-y-4">
+              {book.reviewQuotes.map((quote, i) => (
+                <blockquote
+                  key={i}
+                  className="border-r-2 border-gold-400/40 pr-4 text-sm leading-7 text-sepia-200"
+                >
+                  <p className="italic">&rdquo;{quote.text}&ldquo;</p>
+                  <footer className="mt-2 text-xs tracking-wide text-gold-400">
+                    {quote.author}
+                    {quote.source ? (
+                      <span className="text-sepia-500"> · {quote.source}</span>
+                    ) : null}
+                  </footer>
+                </blockquote>
+              ))}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
