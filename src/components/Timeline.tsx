@@ -1,4 +1,6 @@
 import { timelineMilestones } from "@/data/site";
+import LinkedText from "./LinkedText";
+import { siteLinks } from "@/lib/keyword-links";
 
 // A vertical timeline of Asher Knafo's real, dated milestones — replaces the
 // old 3-card grid (which only showed 1935 / 1951 / 1977) with the full list
@@ -12,7 +14,9 @@ export default function Timeline() {
           <p className="font-display text-lg font-bold gold-text">
             {m.year}
           </p>
-          <p className="mt-1 text-sm leading-7 text-sepia-200">{m.label}</p>
+          <p className="mt-1 text-sm leading-7 text-sepia-200">
+            <LinkedText text={m.label} rules={siteLinks} />
+          </p>
         </li>
       ))}
     </ol>

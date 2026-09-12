@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import type { Book } from "@/data/site";
 import BookCover from "./BookCover";
+import LinkedText from "./LinkedText";
+import { siteLinksExcept } from "@/lib/keyword-links";
 
 export default function BookModal({
   book,
@@ -57,7 +59,7 @@ export default function BookModal({
             <span className="zellige-star" />
           </div>
           <p className="text-base leading-8 text-sepia-200">
-            {book.description}
+            <LinkedText text={book.description} rules={siteLinksExcept(`/books#${book.slug}`)} />
           </p>
 
           {book.publisher || book.edition ? (
@@ -79,7 +81,7 @@ export default function BookModal({
 
           {book.adaptations ? (
             <p className="mt-3 text-sm leading-7 text-sepia-300">
-              {book.adaptations}
+              <LinkedText text={book.adaptations} rules={siteLinksExcept(`/books#${book.slug}`)} />
             </p>
           ) : null}
 

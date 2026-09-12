@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
 import { books, editorialWorks } from "@/data/site";
 import { SITE_URL } from "@/lib/site-url";
 import BooksList from "@/components/BooksList";
+import LinkedText from "@/components/LinkedText";
+import { siteLinksExcept } from "@/lib/keyword-links";
 
 export const metadata: Metadata = {
   title: "ספרים | אשר כנפו — סופר וחוקר יהדות מרוקו",
@@ -56,8 +59,14 @@ export default function BooksPage() {
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-sepia-300">
           רומנים, ספרי מחקר וסיפורת עממית — כתיבה הנפרשת על פני יותר משני
-          עשורים, ומתעדת את עולמם של יהודי מרוקו. לשירתו של אשר כנפו הוקדש
-          עמוד נפרד.
+          עשורים, ומתעדת את עולמם של יהודי מרוקו. ל
+          <Link
+            href="/poems"
+            className="text-gold-300 underline decoration-gold-400/40 underline-offset-4 hover:text-gold-200"
+          >
+            שירתו
+          </Link>{" "}
+          של אשר כנפו הוקדש עמוד נפרד.
         </p>
         <div className="zellige-divider mt-8">
           <span className="zellige-star" />
@@ -82,7 +91,8 @@ export default function BooksPage() {
           {editorialWorks.map((w) => (
             <article
               key={w.slug}
-              className="card-panel flex gap-5 p-6"
+              id={w.slug}
+              className="card-panel flex scroll-mt-24 gap-5 p-6"
             >
               {w.cover ? (
                 <div className="arch-frame relative h-32 w-24 flex-shrink-0 overflow-hidden">
@@ -106,7 +116,7 @@ export default function BooksPage() {
                   <p className="mt-1 text-xs text-sepia-400">מאת {w.author}</p>
                 ) : null}
                 <p className="mt-3 text-sm leading-7 text-sepia-300">
-                  {w.description}
+                  <LinkedText text={w.description} rules={siteLinksExcept(`/books#${w.slug}`)} />
                 </p>
               </div>
             </article>

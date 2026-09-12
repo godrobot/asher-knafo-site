@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import VideosList from "@/components/VideosList";
 
 export const metadata: Metadata = {
@@ -17,7 +18,14 @@ export default function VideosPage() {
           סרטונים
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-sepia-300">
-          קטעי וידאו הקשורים לאשר כנפו ולפועלו.
+          קטעי וידאו הקשורים לאשר כנפו ולפועלו — הרצאות, השקות{" "}
+          <Link
+            href="/books"
+            className="text-gold-300 underline decoration-gold-400/40 underline-offset-4 hover:text-gold-200"
+          >
+            ספרים
+          </Link>{" "}
+          ואירועי הוקרה.
         </p>
         <div className="zellige-divider mt-8">
           <span className="zellige-star" />

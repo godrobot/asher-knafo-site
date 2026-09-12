@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import type { PressArticle } from "@/data/site";
+import LinkedText from "./LinkedText";
+import { siteLinks } from "@/lib/keyword-links";
 
 export default function PressModal({
   article,
@@ -53,7 +55,7 @@ export default function PressModal({
         </div>
 
         <p className="text-base leading-8 text-sepia-200">
-          {article.description}
+          <LinkedText text={article.description} rules={siteLinks} />
         </p>
 
         <p className="mt-6 text-xs uppercase tracking-widest text-gold-400">

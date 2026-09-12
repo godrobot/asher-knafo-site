@@ -3,6 +3,8 @@ import Image from "next/image";
 import { academicContribution, bio, siteInfo } from "@/data/site";
 import Awards from "@/components/Awards";
 import Timeline from "@/components/Timeline";
+import LinkedText from "@/components/LinkedText";
+import { siteLinks } from "@/lib/keyword-links";
 
 export const metadata: Metadata = {
   title: "אודות | אשר כנפו — סופר וחוקר יהדות מרוקו",
@@ -57,7 +59,7 @@ export default function AboutPage() {
       <article className="space-y-6">
         {bio.paragraphs.map((p, i) => (
           <p key={i} className="text-base leading-8 text-sepia-200">
-            {p}
+            <LinkedText text={p} rules={siteLinks} />
           </p>
         ))}
       </article>
@@ -84,7 +86,7 @@ export default function AboutPage() {
         <article className="mx-auto mt-8 max-w-3xl space-y-6">
           {academicContribution.paragraphs.map((p, i) => (
             <p key={i} className="text-base leading-8 text-sepia-200">
-              {p}
+              <LinkedText text={p} rules={siteLinks} />
             </p>
           ))}
         </article>

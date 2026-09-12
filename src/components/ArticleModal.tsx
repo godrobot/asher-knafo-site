@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import type { BritArticle } from "@/data/site";
+import LinkedText from "./LinkedText";
+import { siteLinks } from "@/lib/keyword-links";
 
 export default function ArticleModal({
   article,
@@ -48,7 +50,7 @@ export default function ArticleModal({
         <div className="space-y-4">
           {article.body.map((p, i) => (
             <p key={i} className="text-base leading-8 text-sepia-200">
-              {p}
+              <LinkedText text={p} rules={siteLinks} />
             </p>
           ))}
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PressList from "@/components/PressList";
 
 export const metadata: Metadata = {
@@ -17,7 +18,21 @@ export default function PressPage() {
           בעיתונות
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-sepia-300">
-          אשר כנפו בכתבות עיתונות לאורך השנים.
+          אשר כנפו בכתבות עיתונות לאורך השנים — ובהן סיקור מפעל המחקר{" "}
+          <Link
+            href="/poems#shirat-haavanim-poems"
+            className="text-gold-300 underline decoration-gold-400/40 underline-offset-4 hover:text-gold-200"
+          >
+            &rdquo;שירת האבנים&ldquo;
+          </Link>{" "}
+          ושל כתב העת{" "}
+          <Link
+            href="/brit"
+            className="text-gold-300 underline decoration-gold-400/40 underline-offset-4 hover:text-gold-200"
+          >
+            &rdquo;ברית&ldquo;
+          </Link>
+          .
         </p>
         <div className="zellige-divider mt-8">
           <span className="zellige-star" />

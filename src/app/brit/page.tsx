@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { britMagazine } from "@/data/site";
 import BritArticles from "./BritArticles";
+import LinkedText from "@/components/LinkedText";
+import { siteLinks } from "@/lib/keyword-links";
 
 export const metadata: Metadata = {
   title: "ברית | כתב העת של יהודי מרוקו — אשר כנפו",
@@ -34,7 +37,17 @@ export default function BritPage() {
 
       <div className="card-panel p-8 sm:p-10">
         <p className="text-base leading-8 text-sepia-200">
-          {britMagazine.description}
+          <LinkedText text={britMagazine.description} rules={siteLinks} />
+        </p>
+        <p className="mt-4 text-sm leading-7 text-sepia-300">
+          כתב העת הוא חלק ממפעל המחקר והתיעוד הרחב יותר של אשר כנפו — ראו{" "}
+          <Link
+            href="/about"
+            className="text-gold-300 underline decoration-gold-400/40 underline-offset-4 hover:text-gold-200"
+          >
+            עוד על תרומתו האקדמית בעמוד האודות
+          </Link>
+          .
         </p>
 
         <div className="mt-10 border-t border-gold-400/15 pt-8">

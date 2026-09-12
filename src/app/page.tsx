@@ -97,6 +97,23 @@ export default function Home() {
         >
           הביוגרפיה המלאה ←
         </Link>
+        <p className="mx-auto mt-4 max-w-2xl text-sm text-sepia-400">
+          קראו גם על{" "}
+          <Link
+            href="/poems"
+            className="text-gold-300 underline decoration-gold-400/40 underline-offset-4 hover:text-gold-200"
+          >
+            שירתו
+          </Link>{" "}
+          ועל{" "}
+          <Link
+            href="/press"
+            className="text-gold-300 underline decoration-gold-400/40 underline-offset-4 hover:text-gold-200"
+          >
+            הסיקור התקשורתי
+          </Link>{" "}
+          על פועלו.
+        </p>
       </section>
 
       {/* Featured books */}
@@ -211,7 +228,16 @@ export default function Home() {
           &rdquo;הכינור הוא ככל הנראה אלגוריה לדבר לא מושג — התקווה, הכמיהה,
           האכזבה וההתחדשות של דור שלם שעזב את מרוקו והגיע לארץ הקודש.&ldquo;
         </blockquote>
-        <p className="mt-4 text-sm text-gold-400">מתוך &rdquo;הכינור ואני&ldquo;</p>
+        <p className="mt-4 text-sm text-gold-400">
+          מתוך &rdquo;
+          <Link
+            href="/books#hakinor-veani"
+            className="underline decoration-gold-400/40 underline-offset-4 hover:text-gold-300"
+          >
+            הכינור ואני
+          </Link>
+          &ldquo;
+        </p>
       </section>
     </div>
   );

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { poemSamples, poetryWorks } from "@/data/site";
+import LinkedText from "@/components/LinkedText";
+import { siteLinks, siteLinksExcept } from "@/lib/keyword-links";
 
 export const metadata: Metadata = {
   title: "שירה | אשר כנפו — סופר וחוקר יהדות מרוקו",
@@ -50,7 +52,7 @@ export default function PoemsPage() {
               {w.author ? ` · ${w.author}` : ""}
             </p>
             <p className="mt-4 text-base leading-8 text-sepia-200">
-              {w.description}
+              <LinkedText text={w.description} rules={siteLinksExcept(`/poems#${w.slug}`)} />
             </p>
           </article>
         ))}
@@ -88,7 +90,9 @@ export default function PoemsPage() {
                   </span>
                 ))}
               </p>
-              <p className="mt-4 text-xs text-sepia-400">{p.context}</p>
+              <p className="mt-4 text-xs text-sepia-400">
+                <LinkedText text={p.context} rules={siteLinks} />
+              </p>
             </blockquote>
           ))}
         </div>
