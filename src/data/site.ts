@@ -665,7 +665,7 @@ export const pressArticles: PressArticle[] = [
   },
   {
     outlet: "אשדודס",
-    title: "ד\"ר אשר כנפו זכה לאות 'יקיר העיר'",
+    title: "אשר כנפו זכה לאות 'יקיר העיר'",
     date: "נובמבר 2022",
     url: "https://ashdods.co.il/קהילות/ד-ר-אשר-כנפו-זכה-לאות-יקיר-העיר-523586",
     description:
@@ -722,5 +722,17 @@ export const videos: Video[] = [
       "גרסה מקוצרת של אירוע ההוקרה החגיגי שנערך לכבוד אשר כנפו ב-26 באוקטובר 2025, באולם מונארט באשדוד",
     channel: "Merav Knafo",
     url: "https://www.youtube.com/watch?v=YEO1nIhNL6U",
+  },
+  {
+    id: "z3fKITxZ0dY",
+    title: "Video Aranes",
+    channel: "Merav Knafo",
+    url: "https://youtu.be/z3fKITxZ0dY",
+  },
+  {
+    id: "IvPH8TdjcZc",
+    title: "A Journey Back in Time: An AI Tribute to Asher Knafo",
+    channel: "Merav Knafo",
+    url: "https://youtu.be/IvPH8TdjcZc",
   },
 ];
