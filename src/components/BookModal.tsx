@@ -26,7 +26,7 @@ export default function BookModal({
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div
-        className="card-panel relative grid w-full max-w-2xl gap-6 border-gold-400/30 p-8 sm:grid-cols-[auto_1fr] sm:p-10"
+        className="card-panel relative grid w-full max-w-2xl items-start gap-6 border-gold-400/30 p-8 sm:grid-cols-[144px_1fr] sm:p-10"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -39,8 +39,10 @@ export default function BookModal({
 
         <BookCover
           book={book}
-          className="mx-auto h-56 w-36 flex-shrink-0 sm:mx-0"
+          className="mx-auto sm:mx-0"
           titleClassName="text-sm"
+          width={144}
+          height={216}
         />
 
         <div>

@@ -16,12 +16,14 @@ export default function BooksList() {
             key={book.slug}
             id={book.slug}
             onClick={() => setOpen(book)}
-            className="card-panel group grid scroll-mt-24 gap-6 p-8 text-right transition-transform hover:-translate-y-1 sm:grid-cols-[auto_1fr]"
+            className="card-panel group grid scroll-mt-24 items-start gap-6 p-8 text-right transition-transform hover:-translate-y-1 sm:grid-cols-[128px_1fr]"
           >
             <BookCover
               book={book}
-              className="mx-auto h-48 w-32 flex-shrink-0 sm:mx-0"
+              className="mx-auto sm:mx-0"
               titleClassName="text-xs"
+              width={128}
+              height={192}
             />
             <div>
               <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
