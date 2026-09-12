@@ -37,7 +37,7 @@ export default function BookCover({
   if (book.cover) {
     return (
       <div
-        className={`arch-frame relative shrink-0 self-start overflow-hidden ${className}`}
+        className={`relative shrink-0 self-start overflow-hidden rounded-lg border border-gold-400/30 ${className}`}
         style={boxStyle}
       >
         <Image
@@ -53,7 +53,7 @@ export default function BookCover({
 
   return (
     <div
-      className={`arch-frame relative flex shrink-0 flex-col items-center justify-center gap-3 self-start overflow-hidden bg-gradient-to-b from-[rgba(205,161,90,0.16)] via-[rgba(35,26,19,0.9)] to-[rgba(15,9,6,0.95)] p-3 text-center ${className}`}
+      className={`relative flex shrink-0 flex-col items-center justify-center gap-3 self-start overflow-hidden rounded-lg border border-gold-400/30 bg-gradient-to-b from-[rgba(205,161,90,0.16)] via-[rgba(35,26,19,0.9)] to-[rgba(15,9,6,0.95)] p-3 text-center ${className}`}
       style={boxStyle}
     >
       <span className={`zellige-star ${starClassName}`} />
