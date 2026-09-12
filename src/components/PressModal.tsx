@@ -56,6 +56,22 @@ export default function PressModal({
           {article.description}
         </p>
 
+        <p className="mt-6 text-xs uppercase tracking-widest text-gold-400">
+          מתוך הכתבה
+        </p>
+        <blockquote className="mt-2 border-r-2 border-gold-400/40 pr-4 text-base italic leading-8 text-sepia-100">
+          &rdquo;{article.quote}&ldquo;
+          {article.author ? (
+            <footer className="mt-2 text-xs not-italic tracking-wide text-gold-400">
+              — {article.author}, {article.outlet}
+            </footer>
+          ) : (
+            <footer className="mt-2 text-xs not-italic tracking-wide text-gold-400">
+              — מתוך הכתבה ב{article.outlet}
+            </footer>
+          )}
+        </blockquote>
+
         <a
           href={article.url}
           target="_blank"

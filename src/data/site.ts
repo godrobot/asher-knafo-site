@@ -665,6 +665,8 @@ export type PressArticle = {
   date: string;
   url: string;
   description: string;
+  quote: string; // short verbatim excerpt from the article's own body text
+  author?: string; // byline, when shown on the original page
 };
 
 // Real press coverage about Asher Knafo (not written by him), verified
@@ -679,6 +681,9 @@ export const pressArticles: PressArticle[] = [
     url: "https://www.ynet.co.il/judaism/discourse/article/syvbicdqr",
     description:
       "כתבה נרחבת על אשר כנפו וד\"ר שלום אלדר, שפיענחו במשך שבע שנים כ-450 כתובות מצבה עבריות בבית העלמין היהודי של אסאוירה — וביניהן כתובת מצבתו של סבו-רבו של אשר עצמו — פרויקט שהוליד את הספר \"שירת האבנים\".",
+    quote:
+      "לפני כעשר שנים ביקר אשר כנפו במרוקו, בבית העלמין היהודי של עיר הנמל אסואירה, אשר מכונה בפי היהודים בשמה המקורי – מוגדור.",
+    author: "יצחק טסלר",
   },
   {
     outlet: "כאן דרום - אשדוד",
@@ -687,6 +692,9 @@ export const pressArticles: PressArticle[] = [
     url: "https://www.kan-ashdod.co.il/culture/83405",
     description:
       "פרופיל על אשר כנפו (אז בן 85) כמי שהקדיש את חייו לשימור סיפוריה, מוזיקתה ומורשתה של יהדות מרוקו.",
+    quote:
+      "אי אפשר שלא לאהוב את אשר כנפו, איש אשכולות צנוע וחייכן, הנוהג כבוד בבריות, ומכריו ומוקיריו הרבים משיבים לו אהבה.",
+    author: "ויקטוריה קונבסקי",
   },
   {
     outlet: "כאן דרום - אשדוד",
@@ -695,6 +703,9 @@ export const pressArticles: PressArticle[] = [
     url: "https://www.kan-ashdod.co.il/news/116855",
     description:
       "סיקור הרצאותיו הציבוריות של אשר כנפו באשדוד על תרבות יהודי מרוקו, מתוקף עברו כמפקח חינוך וכחוקר התחום.",
+    quote:
+      "במסגרת האירועים העיוניים של פסטיבל 'אשדודאנס' ייערכו הרצאות מפי אשר כנפו, סופר ומשורר מאשדוד, ורפי אלקובי, מדריך טיולים ממרוקו המתגורר בעיר אשדוד.",
+    author: "חן מור-אטיאס",
   },
   {
     outlet: "אשדודי",
@@ -704,6 +715,8 @@ export const pressArticles: PressArticle[] = [
     url: "https://ashdodi.com/the-book-of-stone-poetry/",
     description:
       "הודעה על אירוע השקת הספר \"שירת האבנים\", פרי מחקר הכתובות על מצבות בתי העלמין, בבית קלנג שבאשדוד.",
+    quote:
+      "\"שירת האבנים\", ספר מחקרי על שירה מופלאה שנכתבה על גבי המצבות בשני בתי העלמין של מוגדור-אצווירא שבמרוקו.",
   },
   {
     outlet: "אשדודס",
@@ -712,6 +725,8 @@ export const pressArticles: PressArticle[] = [
     url: "https://ashdods.co.il/קהילות/ד-ר-אשר-כנפו-זכה-לאות-יקיר-העיר-523586",
     description:
       "סיקור הענקת אות \"יקיר העיר\" לאשר כנפו, אחד מ-21 יקירי אשדוד באותה שנה, בזכות פועלו בתחומי המורשת והחינוך ועמידתו בראש התזמורת האנדלוסית הישראלית.",
+    quote:
+      "בשבוע האחרון נבחרו 21 תושבים ותושבות מהעיר וקיבלו את אות \"יקיר העיר\" אשדוד בזכות תרומתם לקידום ופיתוח העיר בשלל תחומים.",
   },
   {
     outlet: "Tenoua (צרפת)",
@@ -721,6 +736,8 @@ export const pressArticles: PressArticle[] = [
     url: "https://tenoua.org/2025/09/26/asher-knafo-temoin-du-transit-meconnu-des-juifs-maghrebins-de-marseille-vers-israel/",
     description:
       "ראיון (מאת קמיל סקאלי) עם אשר כנפו על נעוריו במחנה המעבר \"ארנאס\" הגדול במרסיי, ועל פעילותו שם בהמשך למען מהגרים יהודים מצפון אפריקה.",
+    quote: "Il y a près de soixante ans, à Marseille, se trouvait le camp du Grand Arénas.",
+    author: "Propos recueillis par Camille Scali",
   },
 ];
 
@@ -773,14 +790,14 @@ export const videos: Video[] = [
   },
   {
     id: "z3fKITxZ0dY",
-    title: "Video Aranes",
+    title: "סרטון ממחנה ארנס",
     channel: "Merav Knafo",
     url: "https://youtu.be/z3fKITxZ0dY",
     group: "אירועי הוקרה ותיעוד משפחתי",
   },
   {
     id: "IvPH8TdjcZc",
-    title: "A Journey Back in Time: An AI Tribute to Asher Knafo",
+    title: "מסע בזמן: מחווה מבוססת בינה מלאכותית לאשר כנפו",
     channel: "Merav Knafo",
     url: "https://youtu.be/IvPH8TdjcZc",
     group: "אירועי הוקרה ותיעוד משפחתי",
