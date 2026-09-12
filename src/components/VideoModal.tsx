@@ -45,7 +45,7 @@ export default function VideoModal({
           <span className="zellige-star" />
         </div>
 
-        <div className="arch-frame relative aspect-video w-full overflow-hidden">
+        <div className="relative aspect-video w-full overflow-hidden rounded-lg border border-gold-400/30 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]">
           <iframe
             src={`https://www.youtube.com/embed/${video.id}`}
             title={video.title}

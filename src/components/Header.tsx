@@ -7,6 +7,7 @@ const navLinks = [
   { href: "/poems", label: "שירה" },
   { href: "/brit", label: "ברית" },
   { href: "/videos", label: "סרטונים" },
+  { href: "/press", label: "בעיתונות" },
   { href: "/contact", label: "צור קשר" },
 ];
 

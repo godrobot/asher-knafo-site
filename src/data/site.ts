@@ -610,6 +610,71 @@ export const britMagazine = {
 
 export type BritArticle = (typeof britMagazine)["articles"][number];
 
+export type PressArticle = {
+  outlet: string;
+  title: string;
+  date: string;
+  url: string;
+  description: string;
+};
+
+// Real press coverage about Asher Knafo (not written by him), verified
+// against the original publications — outlet names, titles, dates and URLs
+// are all real and unaltered.
+export const pressArticles: PressArticle[] = [
+  {
+    outlet: "Ynet",
+    title:
+      "כולל רצח אנטישמי: שירים על מצבות חושפים פרטים על היהודים במרוקו",
+    date: "מאי 2024",
+    url: "https://www.ynet.co.il/judaism/discourse/article/syvbicdqr",
+    description:
+      "כתבה נרחבת על אשר כנפו וד\"ר שלום אלדר, שפיענחו במשך שבע שנים כ-450 כתובות מצבה עבריות בבית העלמין היהודי של אסאוירה — וביניהן כתובת מצבתו של סבו-רבו של אשר עצמו — פרויקט שהוליד את הספר \"שירת האבנים\".",
+  },
+  {
+    outlet: "כאן דרום - אשדוד",
+    title: "אשר כנפו הוא שומר הגחלת",
+    date: "ינואר 2020",
+    url: "https://www.kan-ashdod.co.il/culture/83405",
+    description:
+      "פרופיל על אשר כנפו (אז בן 85) כמי שהקדיש את חייו לשימור סיפוריה, מוזיקתה ומורשתה של יהדות מרוקו.",
+  },
+  {
+    outlet: "כאן דרום - אשדוד",
+    title: "זיכרונות ממרוקו: הרצאות מרתקות באשדוד...",
+    date: "יולי 2022",
+    url: "https://www.kan-ashdod.co.il/news/116855",
+    description:
+      "סיקור הרצאותיו הציבוריות של אשר כנפו באשדוד על תרבות יהודי מרוקו, מתוקף עברו כמפקח חינוך וכחוקר התחום.",
+  },
+  {
+    outlet: "אשדודי",
+    title:
+      "'שירת האבנים': ספרם של אשר כנפו וד\"ר שלום אלדר יושק ב-30 במרץ...",
+    date: "מרץ 2025",
+    url: "https://ashdodi.com/the-book-of-stone-poetry/",
+    description:
+      "הודעה על אירוע השקת הספר \"שירת האבנים\", פרי מחקר הכתובות על מצבות בתי העלמין, בבית קלנג שבאשדוד.",
+  },
+  {
+    outlet: "אשדודס",
+    title: "ד\"ר אשר כנפו זכה לאות 'יקיר העיר'",
+    date: "נובמבר 2022",
+    url: "https://ashdods.co.il/קהילות/ד-ר-אשר-כנפו-זכה-לאות-יקיר-העיר-523586",
+    description:
+      "סיקור הענקת אות \"יקיר העיר\" לאשר כנפו, אחד מ-21 יקירי אשדוד באותה שנה, בזכות פועלו בתחומי המורשת והחינוך ועמידתו בראש התזמורת האנדלוסית הישראלית.",
+  },
+  {
+    outlet: "Tenoua (צרפת)",
+    title:
+      "Asher Knafo, témoin du transit méconnu des Juifs maghrébins de Marseille vers Israël",
+    date: "ספטמבר 2025",
+    url: "https://tenoua.org/2025/09/26/asher-knafo-temoin-du-transit-meconnu-des-juifs-maghrebins-de-marseille-vers-israel/",
+    description:
+      "ראיון (מאת קמיל סקאלי) עם אשר כנפו על נעוריו במחנה המעבר \"ארנאס\" הגדול במרסיי, ועל פעילותו שם בהמשך למען מהגרים יהודים מצפון אפריקה.",
+  },
+];
+
 export type Video = {
   id: string; // YouTube video id
   title: string;
@@ -637,5 +702,18 @@ export const videos: Video[] = [
     title: "תסעדו ותצחקו -- קומדיה מוסיקלית",
     channel: "תאטרון קדם",
     url: "https://www.youtube.com/watch?v=-CdDXaIP7L4",
+  },
+  {
+    id: "7nqeMUswJ-0",
+    title: "\"חיים שכאלה\" – אירוע הוקרה מרגש לאשר כנפו (אוקטובר 2025, אשדוד)",
+    channel: "Merav Knafo",
+    url: "https://www.youtube.com/watch?v=7nqeMUswJ-0",
+  },
+  {
+    id: "YEO1nIhNL6U",
+    title:
+      "גרסה מקוצרת של אירוע ההוקרה החגיגי שנערך לכבוד אשר כנפו ב-26 באוקטובר 2025, באולם מונארט באשדוד",
+    channel: "Merav Knafo",
+    url: "https://www.youtube.com/watch?v=YEO1nIhNL6U",
   },
 ];
