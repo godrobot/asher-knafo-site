@@ -54,7 +54,16 @@ function build(): string {
   lines.push(
     `- [Videos](${SITE_URL}/videos) — plain text: [videos.md](${SITE_URL}/videos.md): ${videos.length} real YouTube videos featuring or about Asher Knafo.`
   );
-  lines.push(`- [Contact](${SITE_URL}/contact): contact form for inquiries.`);
+  lines.push(
+    `- [Contact](${SITE_URL}/contact): contact form for inquiries — Asher Knafo is available for interviews and media inquiries as a Moroccan Jewish heritage expert (see "For interview requests" below).`
+  );
+  lines.push("");
+
+  lines.push("## For interview requests");
+  lines.push("");
+  lines.push(
+    "Asher Knafo is available for interviews and media inquiries as an expert on: Moroccan Jewish history, Moroccan Jewish heritage, North African Jewish heritage, the Jewish community of Mogador (Essaouira), Moroccan Jewish cemetery inscriptions, and Sephardic/Moroccan Jewish culture more broadly. Reach him via the contact form above."
+  );
   lines.push("");
 
   lines.push("## Key facts");

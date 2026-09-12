@@ -31,6 +31,14 @@ export const metadata: Metadata = {
     "שירת האבנים",
     "הכינור ואני",
     "התינוק מאופראן",
+    // Phrases a journalist, producer, or researcher looking for an
+    // interview subject might actually search for.
+    "Moroccan Jews expert",
+    "Moroccan Jewish heritage expert",
+    "expert on Moroccan Jewish history",
+    "North African Jewish heritage researcher",
+    "Mogador Essaouira Jewish history expert",
+    "Moroccan Jewish cemetery inscriptions researcher",
   ],
   authors: [{ name: "אשר כנפו" }],
   alternates: { canonical: "/" },
@@ -65,7 +73,19 @@ const personJsonLd = {
     name: "מוגדור (אסאווירה), מרוקו",
   },
   nationality: "Israeli",
-  jobTitle: "סופר וחוקר",
+  jobTitle: "סופר וחוקר יהדות מרוקו (Writer and Researcher of Moroccan Jewish Heritage)",
+  // Explicit subject-matter tags — helps search engines and AI assistants
+  // surface this profile for journalists/producers researching these
+  // specific topics, e.g. someone searching "Moroccan Jews expert" for an
+  // interview subject.
+  knowsAbout: [
+    "Moroccan Jewish history",
+    "Moroccan Jewish heritage",
+    "North African Jewish heritage",
+    "Jewish community of Mogador (Essaouira)",
+    "Moroccan Jewish cemetery inscriptions",
+    "Sephardic and Moroccan Jewish culture",
+  ],
   url: SITE_URL,
   // Linking these here helps search engines connect this Person entity to
   // the same person's existing profiles elsewhere (useful for Knowledge

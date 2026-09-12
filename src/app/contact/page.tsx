@@ -5,7 +5,12 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "צור קשר | אשר כנפו",
   description:
-    "יצירת קשר עם אשר כנפו — סופר וחוקר יהדות מרוקו, עורך כתב העת ברית — לשאלות, הרצאות ושיתופי פעולה.",
+    "יצירת קשר עם אשר כנפו — סופר וחוקר יהדות מרוקו, עורך כתב העת ברית — לשאלות, הרצאות ושיתופי פעולה. Available for media interviews on Moroccan Jewish history and heritage.",
+  keywords: [
+    "Moroccan Jews expert interview",
+    "Moroccan Jewish heritage expert contact",
+    "יצירת קשר אשר כנפו",
+  ],
   alternates: { canonical: "/contact" },
 };
 
@@ -39,6 +44,38 @@ export default function ContactPage() {
           עמוד הפייסבוק
         </a>
       </div>
+
+      {/* A plain-language note for journalists/producers/researchers who
+          land here looking for an interview subject — real, honest framing
+          of his actual credentials (40+ years of independent research,
+          editor of "Brit", the tombstone-inscription research), in both
+          Hebrew and English so it's findable by English-language search
+          too (e.g. "Moroccan Jews expert", "Moroccan Jewish heritage
+          expert for interview"). */}
+      <section className="mt-14 border-t border-gold-400/15 pt-10 text-center">
+        <p className="text-xs tracking-[0.3em] text-gold-400">לעיתונאים וחוקרים</p>
+        <h2 className="font-display mt-2 text-xl font-bold text-sepia-50">
+          For Journalists &amp; Researchers
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-sepia-300">
+          אשר כנפו זמין לראיונות ולפניות מהתקשורת בנושאי יהדות מרוקו, קהילת
+          מוגדור-אסאווירה ומורשת יהודי צפון אפריקה — לרבות מחקרו על כתובות
+          בתי הקברות היהודיים (&rdquo;שירת האבנים&ldquo;) ועריכתו את כתב העת
+          &rdquo;ברית&ldquo;.
+        </p>
+        <p
+          dir="ltr"
+          className="mx-auto mt-3 max-w-xl text-sm leading-7 text-sepia-400"
+        >
+          Asher Knafo — a Moroccan Jewish heritage expert and independent
+          researcher — is available for interviews and media inquiries on
+          Moroccan Jewish history, the Jewish community of Mogador
+          (Essaouira), and North African Jewish heritage, including his
+          research on Jewish cemetery inscriptions (&ldquo;Shirat
+          HaAvanim&rdquo;) and his editorship of the Moroccan Jewish journal
+          &ldquo;Brit.&rdquo;
+        </p>
+      </section>
     </div>
   );
 }
