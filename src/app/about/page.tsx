@@ -30,7 +30,7 @@ export default function AboutPage() {
         </div>
       </header>
 
-      <div className="mb-14 flex justify-center">
+      <div className="mb-6 flex justify-center">
         <div className="arch-frame relative aspect-square w-48 overflow-hidden sm:w-56">
           <Image
             src={siteInfo.aboutImage}
@@ -40,6 +40,17 @@ export default function AboutPage() {
             className="object-cover"
           />
         </div>
+      </div>
+
+      <div className="mb-14 flex justify-center">
+        <a
+          href={siteInfo.wikipediaUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-gold-300 underline decoration-gold-400/40 underline-offset-4 hover:text-gold-200"
+        >
+          הערך על אשר כנפו בוויקיפדיה ←
+        </a>
       </div>
 
       <article className="space-y-6">
