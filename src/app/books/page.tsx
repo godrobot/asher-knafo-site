@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { books, editorialWorks } from "@/data/site";
+import { editorialWorks } from "@/data/site";
+import BooksList from "@/components/BooksList";
 
 export const metadata: Metadata = {
   title: "ספרים | אשר כנפו — סופר וחוקר יהדות מרוקו",
@@ -35,47 +36,7 @@ export default function BooksPage() {
         </div>
       </header>
 
-      <div className="space-y-8">
-        {books.map((book) => (
-          <article
-            key={book.slug}
-            id={book.slug}
-            className="card-panel scroll-mt-24 grid gap-6 p-8 sm:grid-cols-[auto_1fr]"
-          >
-            {book.cover ? (
-              <div className="arch-frame relative mx-auto h-48 w-32 flex-shrink-0 overflow-hidden sm:mx-0">
-                <Image
-                  src={book.cover}
-                  alt={`עטיפת הספר ${book.title}`}
-                  fill
-                  sizes="128px"
-                  className="object-cover"
-                />
-              </div>
-            ) : (
-              <div className="mx-auto flex h-48 w-32 flex-shrink-0 items-center justify-center rounded-md border border-gold-400/25 bg-sepia-950/40 sm:mx-0">
-                <span className="zellige-star" />
-              </div>
-            )}
-            <div>
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
-                <h2 className="font-display text-2xl font-bold text-sepia-50">
-                  {book.title}
-                </h2>
-                <span className="text-xs tracking-widest text-gold-400">
-                  {book.year}
-                </span>
-              </div>
-              <p className="mt-1 text-xs uppercase tracking-wide text-sepia-400">
-                {book.genre}
-              </p>
-              <p className="mt-4 text-base leading-8 text-sepia-200">
-                {book.description}
-              </p>
-            </div>
-          </article>
-        ))}
-      </div>
+      <BooksList />
 
       <section className="mt-20">
         <div className="zellige-divider mb-10">
