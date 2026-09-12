@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "סרטונים | אשר כנפו — סופר וחוקר יהדות מרוקו",
   description:
     "קטעי וידאו הקשורים לאשר כנפו ולפועלו — מטעם משרד החינוך, אגודת הסופרות והסופרים העברים בישראל, ותאטרון קדם.",
+  alternates: { canonical: "/videos", types: { "text/markdown": "/videos.md" } },
 };
 
 export default function VideosPage() {

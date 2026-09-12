@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SITE_URL } from "@/lib/site-url";
+import { siteInfo } from "@/data/site";
 
 const title = "אשר כנפו | סופר וחוקר יהדות מרוקו";
 const description =
@@ -66,7 +67,15 @@ const personJsonLd = {
   nationality: "Israeli",
   jobTitle: "סופר וחוקר",
   url: SITE_URL,
-  sameAs: ["https://facebook.com/1339880709198479"],
+  // Linking these here helps search engines connect this Person entity to
+  // the same person's existing profiles elsewhere (useful for Knowledge
+  // Graph-style entity resolution) — same reasoning that made adding the
+  // Wikipedia link to the About page worthwhile.
+  sameAs: [
+    "https://facebook.com/1339880709198479",
+    siteInfo.wikipediaUrl,
+    siteInfo.linkedinUrl,
+  ],
 };
 
 export default function RootLayout({

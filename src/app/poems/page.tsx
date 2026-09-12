@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "מצבות מוגדור",
     "Moroccan Jewish poetry",
   ],
+  alternates: { canonical: "/poems", types: { "text/markdown": "/poems.md" } },
 };
 
 export default function PoemsPage() {

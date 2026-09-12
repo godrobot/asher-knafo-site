@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "מוגדור אסאווירה",
     "Moroccan Jewish journal",
   ],
+  alternates: { canonical: "/brit", types: { "text/markdown": "/brit.md" } },
 };
 
 export default function BritPage() {

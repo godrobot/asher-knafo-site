@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     "תזמורת אנדלוסית ישראלית",
     "Asher Knafo biography",
   ],
+  alternates: { canonical: "/about", types: { "text/markdown": "/about.md" } },
 };
 
 export default function AboutPage() {

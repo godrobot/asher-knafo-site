@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "צור קשר | אשר כנפו",
   description:
     "יצירת קשר עם אשר כנפו — סופר וחוקר יהדות מרוקו, עורך כתב העת ברית — לשאלות, הרצאות ושיתופי פעולה.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

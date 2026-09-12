@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "בעיתונות | אשר כנפו — סופר וחוקר יהדות מרוקו",
   description:
     "כתבות עיתונות ומגזינים על אשר כנפו ופועלו — מ-Ynet, כאן דרום אשדוד, אשדודי, אשדודס ו-Tenoua.",
+  alternates: { canonical: "/press", types: { "text/markdown": "/press.md" } },
 };
 
 export default function PressPage() {

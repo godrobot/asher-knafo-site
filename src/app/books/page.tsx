@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { editorialWorks } from "@/data/site";
+import { books, editorialWorks } from "@/data/site";
+import { SITE_URL } from "@/lib/site-url";
 import BooksList from "@/components/BooksList";
 
 export const metadata: Metadata = {
@@ -16,11 +17,38 @@ export const metadata: Metadata = {
     "רומנים על יהודי מרוקו",
     "Asher Knafo books",
   ],
+  alternates: { canonical: "/books", types: { "text/markdown": "/books.md" } },
+};
+
+// Structured data so search engines and AI answer engines can read the
+// book catalog directly (author, genre, year) rather than only inferring
+// it from rendered card text.
+const booksJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: books.map((b, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Book",
+      name: b.title,
+      author: { "@type": "Person", name: "אשר כנפו", alternateName: "Asher Knafo" },
+      datePublished: b.year,
+      genre: b.genre,
+      description: b.description,
+      ...(b.publisher ? { publisher: { "@type": "Organization", name: b.publisher } } : {}),
+      url: `${SITE_URL}/books`,
+    },
+  })),
 };
 
 export default function BooksPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(booksJsonLd) }}
+      />
       <header className="mb-14 text-center">
         <p className="text-xs tracking-[0.3em] text-gold-400">יצירה ספרותית</p>
         <h1 className="font-display mt-3 text-4xl font-black gold-text sm:text-5xl">
