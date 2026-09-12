@@ -7,7 +7,7 @@ export const siteInfo = {
   tagline: "סופר, חוקר יהדות מרוקו ומורשת יהודי צפון אפריקה",
   // Real photographs from the family archive (not AI-generated illustrations).
   heroImage: "/images/hero-asher-book.jpg",
-  aboutImage: "/images/about-asher-portrait.jpg",
+  aboutImage: "/images/hero-asher-book.jpg",
   facebookUrl: "https://facebook.com/1339880709198479",
   version: "1.0.0",
   linkedinUrl: "https://www.linkedin.com/in/asher-knafo",
