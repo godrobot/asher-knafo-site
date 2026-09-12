@@ -9,7 +9,7 @@ export const siteInfo = {
   heroImage: "/images/hero-asher-book.jpg",
   aboutImage: "/images/hero-asher-book.jpg",
   facebookUrl: "https://facebook.com/1339880709198479",
-  wikipediaUrl: "https://he.wikipedia.org/wiki/%D7%90%D7%A9%D7%A8_%D7%9B%D7%A0%D7%A4%D7%95",
+  wikipediaUrl: "https://he.wikipedia.org/wiki/Asher_Knafo",
   version: "1.0.0",
   linkedinUrl: "https://www.linkedin.com/in/asher-knafo",
   // NOTE: the real contact address is intentionally NOT stored here.
