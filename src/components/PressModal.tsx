@@ -36,7 +36,7 @@ export default function PressModal({
           ✕
         </button>
 
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+        <div className="flex flex-col gap-2 pl-12 sm:flex-row sm:items-baseline sm:justify-between">
           <p className="text-xs uppercase tracking-widest text-gold-400">
             {article.outlet}
           </p>
@@ -44,7 +44,7 @@ export default function PressModal({
             {article.date}
           </span>
         </div>
-        <h2 className="font-display mt-2 text-xl font-bold text-sepia-50 sm:text-2xl">
+        <h2 className="font-display mt-2 max-w-[calc(100%-3rem)] text-xl font-bold text-sepia-50 sm:text-2xl">
           {article.title}
         </h2>
 
