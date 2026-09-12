@@ -6,7 +6,7 @@ export const siteInfo = {
   name: "אשר כנפו",
   tagline: "סופר, חוקר יהדות מרוקו ומורשת יהודי צפון אפריקה",
   // Real photographs from the family archive (not AI-generated illustrations).
-  heroImage: "/images/hero-asher-reading.jpg",
+  heroImage: "/images/hero-asher-book.jpg",
   aboutImage: "/images/about-asher-portrait.jpg",
   facebookUrl: "https://facebook.com/1339880709198479",
   version: "1.0.0",
