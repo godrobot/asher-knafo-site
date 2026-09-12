@@ -30,7 +30,9 @@ export default function Footer() {
           <p className="mt-6 text-xs text-sepia-400">
             © {new Date().getFullYear()} אשר כנפו. כל הזכויות שמורות.
           </p>
-          <p className="text-[10px] text-sepia-500">v{siteInfo.version}</p>
+          <p className="text-[10px] text-sepia-500">
+            v{process.env.NEXT_PUBLIC_BUILD_VERSION || siteInfo.version}
+          </p>
         </div>
       </div>
     </footer>
