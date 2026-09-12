@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { academicContribution, bio, siteInfo } from "@/data/site";
 import Awards from "@/components/Awards";
+import Timeline from "@/components/Timeline";
 
 export const metadata: Metadata = {
   title: "אודות | אשר כנפו — סופר וחוקר יהדות מרוקו",
@@ -49,22 +50,17 @@ export default function AboutPage() {
         ))}
       </article>
 
-      <div className="mt-16 grid gap-6 sm:grid-cols-3">
-        <div className="card-panel p-6 text-center">
-          <p className="font-display text-3xl font-bold gold-text">1935</p>
-          <p className="mt-2 text-sm text-sepia-300">נולד באסאוירה (מוגדור)</p>
+      <section className="mt-16">
+        <div className="zellige-divider mb-10">
+          <span className="zellige-star" />
         </div>
-        <div className="card-panel p-6 text-center">
-          <p className="font-display text-3xl font-bold gold-text">1951</p>
-          <p className="mt-2 text-sm text-sepia-300">עלייה ארצה</p>
+        <h2 className="font-display text-center text-2xl font-bold text-gold-300 sm:text-3xl">
+          ציוני דרך
+        </h2>
+        <div className="mx-auto mt-10 max-w-xl">
+          <Timeline />
         </div>
-        <div className="card-panel p-6 text-center">
-          <p className="font-display text-3xl font-bold gold-text">1977</p>
-          <p className="mt-2 text-sm text-sepia-300">
-            ייסוד &rdquo;זיו המערב&ldquo;
-          </p>
-        </div>
-      </div>
+      </section>
 
       <section className="mt-20">
         <div className="zellige-divider mb-10">

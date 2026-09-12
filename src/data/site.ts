@@ -30,6 +30,48 @@ export const bio = {
   ],
 };
 
+export type Milestone = {
+  year: string;
+  label: string;
+};
+
+// Real, dated milestones drawn from the bio paragraphs above, Asher Knafo's
+// own CV, and the awards/books data already on the site — kept in one place
+// so the About-page timeline can render the whole life story, not just the
+// three earliest events.
+export const timelineMilestones: Milestone[] = [
+  { year: "1935", label: "נולד באסאוירה (מוגדור)" },
+  { year: "1951", label: "עלייה ארצה, קיבוץ כפר דרום" },
+  { year: "1961", label: "שליחות באיטליה ובצרפת; לימודי ספרות בסורבון" },
+  {
+    year: "1961–1974",
+    label: "ייסוד בית הספר הראשון לילדי עולי צפון אפריקה, מחנה ארנאס, מרסיי",
+  },
+  { year: "1974", label: "שליחות חינוכית בפנמה" },
+  { year: "1977", label: "ייסוד \"זיו המערב\"" },
+  {
+    year: "1980",
+    label: "מפקח וראש תחום חינוך חברתי, מחוז הדרום, משרד החינוך",
+  },
+  { year: "1982", label: "עריכת כתב העת \"ברית\" — כתב עת אקדמי, החל מגיליונו הראשון" },
+  { year: "1994", label: "הקמת התזמורת האנדלוסית הישראלית" },
+  { year: "1994–2008", label: "התזמורת האנדלוסית זוכה בפרס ישראל" },
+  { year: "2000", label: "\"התינוק מאופראן\" — הוצאה ראשונה" },
+  { year: "2004", label: "\"יכין\" ו\"חתונה במוגדור\"" },
+  { year: "2006", label: "\"הפייטן, השתקן ומספר הסיפורים\"" },
+  { year: "2010", label: "\"חזן בבית המרחץ\"" },
+  { year: "2012", label: "תרגום \"התינוק מאופראן\" לצרפתית" },
+  { year: "2014", label: "\"תה עם נענע\"" },
+  { year: "2015", label: "תרגום \"התינוק מאופראן\" לערבית מוגרבית, אוניברסיטת אגדיר" },
+  { year: "2016", label: "\"הכינור ואני\"; אות \"לבי במזרח\"; פרס החינוך למורים יוצרים" },
+  { year: "2017", label: "פרס גאון (יד בן־צבי); אות \"יקיר הרשות\" (משרד החינוך)" },
+  { year: "2019", label: "\"גשם נדבות\"" },
+  { year: "2021", label: "פרס רונית אבגי" },
+  { year: "2022", label: "\"נשימתו האחרונה\"; אות \"יקיר העיר\", אשדוד" },
+  { year: "2023", label: "\"שירת האבנים\" (עם ד\"ר שלום אלדר)" },
+  { year: "2025", label: "אירוע הוקרה לרגל יום הולדתו ה-90, אולם מונארט, אשדוד" },
+];
+
 // A dedicated block emphasizing the academic, scholarly dimension of Asher
 // Knafo's life work: the "ברית" journal, the "שירת האבנים" tombstone-poetry
 // research project, and the recognition of leading scholars. Quotes are kept

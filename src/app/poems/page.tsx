@@ -74,17 +74,20 @@ export default function PoemsPage() {
               key={p.title}
               className="card-panel border-r-2 border-gold-400/50 p-8"
             >
-              <p className="font-display space-y-1 text-lg leading-10 text-sepia-100">
+              <h3 className="font-display text-xl font-bold text-gold-200">
+                {p.title}
+              </h3>
+              <p className="mt-1 text-xs uppercase tracking-wide text-sepia-400">
+                {p.author}
+              </p>
+              <p className="mt-5 font-display space-y-1 text-lg leading-10 text-sepia-100">
                 {p.lines.map((line, i) => (
                   <span key={i} className="block">
                     {line}
                   </span>
                 ))}
               </p>
-              <footer className="mt-5 text-sm text-gold-400">
-                {p.title} — {p.author}
-              </footer>
-              <p className="mt-2 text-xs text-sepia-400">{p.context}</p>
+              <p className="mt-4 text-xs text-sepia-400">{p.context}</p>
             </blockquote>
           ))}
         </div>
