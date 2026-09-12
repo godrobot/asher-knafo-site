@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { bio, siteInfo } from "@/data/site";
+import { academicContribution, bio, siteInfo } from "@/data/site";
+import Awards from "@/components/Awards";
 
 export const metadata: Metadata = {
   title: "אודות | אשר כנפו — סופר וחוקר יהדות מרוקו",
@@ -63,6 +64,26 @@ export default function AboutPage() {
             ייסוד &rdquo;זיו המערב&ldquo;
           </p>
         </div>
+      </div>
+
+      <section className="mt-20">
+        <div className="zellige-divider mb-10">
+          <span className="zellige-star" />
+        </div>
+        <h2 className="font-display text-center text-2xl font-bold text-gold-300 sm:text-3xl">
+          {academicContribution.heading}
+        </h2>
+        <article className="mx-auto mt-8 max-w-3xl space-y-6">
+          {academicContribution.paragraphs.map((p, i) => (
+            <p key={i} className="text-base leading-8 text-sepia-200">
+              {p}
+            </p>
+          ))}
+        </article>
+      </section>
+
+      <div className="mt-20">
+        <Awards />
       </div>
     </div>
   );

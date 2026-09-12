@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { bio, books, britMagazine, siteInfo } from "@/data/site";
+import { awards, bio, books, britMagazine, siteInfo } from "@/data/site";
 
 export default function Home() {
   const featuredBooks = books.slice(0, 3);
@@ -114,6 +114,44 @@ export default function Home() {
               className="rounded-full border border-gold-400/50 px-8 py-3 text-sm text-gold-300 transition-colors hover:bg-gold-400/10"
             >
               כל הספרים
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Awards teaser */}
+      <section className="border-t border-gold-400/10 bg-sepia-900/40 py-20">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="mb-12 text-center">
+            <h2 className="font-display text-2xl font-bold text-gold-300 sm:text-3xl">
+              פרסים והוקרה
+            </h2>
+            <p className="mt-3 text-sepia-300">
+              הכרה רשמית בתרומתו למחקר, לחינוך ולשימור מורשת יהדות צפון
+              אפריקה
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {awards.slice(0, 3).map((award) => (
+              <div key={award.name} className="card-panel p-6">
+                <span className="text-xs tracking-widest text-gold-400">
+                  {award.year}
+                </span>
+                <h3 className="font-display mt-2 text-lg font-bold text-sepia-50">
+                  {award.name}
+                </h3>
+                <p className="mt-1 text-sm text-sepia-400">{award.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/about"
+              className="rounded-full border border-gold-400/50 px-8 py-3 text-sm text-gold-300 transition-colors hover:bg-gold-400/10"
+            >
+              עוד על מפעל המחקר והתיעוד
             </Link>
           </div>
         </div>
