@@ -609,3 +609,33 @@ export const britMagazine = {
 };
 
 export type BritArticle = (typeof britMagazine)["articles"][number];
+
+export type Video = {
+  id: string; // YouTube video id
+  title: string;
+  channel: string;
+  url: string;
+};
+
+// Real YouTube videos featuring or about Asher Knafo, verified via YouTube's
+// oEmbed API (title + channel confirmed, not fabricated).
+export const videos: Video[] = [
+  {
+    id: "icQrZIP0dag",
+    title: "אשר כנפו, אשדוד",
+    channel: "משרד החינוך - ישראל",
+    url: "https://www.youtube.com/watch?v=icQrZIP0dag",
+  },
+  {
+    id: "QXoZkzNdvLw",
+    title: "שירת האבנים - מאת אשר כנפו ודר שלום אלדר - השקה",
+    channel: "אגודת הסופרות והסופרים העברים בישראל",
+    url: "https://www.youtube.com/watch?v=QXoZkzNdvLw",
+  },
+  {
+    id: "-CdDXaIP7L4",
+    title: "תסעדו ותצחקו -- קומדיה מוסיקלית",
+    channel: "תאטרון קדם",
+    url: "https://www.youtube.com/watch?v=-CdDXaIP7L4",
+  },
+];

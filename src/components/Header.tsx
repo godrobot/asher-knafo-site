@@ -6,6 +6,7 @@ const navLinks = [
   { href: "/books", label: "ספרים" },
   { href: "/poems", label: "שירה" },
   { href: "/brit", label: "ברית" },
+  { href: "/videos", label: "סרטונים" },
   { href: "/contact", label: "צור קשר" },
 ];
 
