@@ -27,6 +27,17 @@ export default function Footer() {
               צור קשר
             </Link>
           </div>
+          <div className="flex gap-6 text-xs">
+            <Link
+              href="/accessibility"
+              className="text-sepia-400 hover:text-gold-300"
+            >
+              הצהרת נגישות
+            </Link>
+            <Link href="/privacy" className="text-sepia-400 hover:text-gold-300">
+              מדיניות פרטיות
+            </Link>
+          </div>
           <p className="mt-6 text-xs text-sepia-400">
             © {new Date().getFullYear()} אשר כנפו. כל הזכויות שמורות.
           </p>
