@@ -25,7 +25,7 @@ export default function Awards() {
             <h3 className="font-display mt-2 text-lg font-bold text-sepia-50">
               {award.name}
             </h3>
-            <p className="mt-1 text-sm text-sepia-400">{award.body}</p>
+            <p className="mt-1 text-sm text-sepia-300">{award.body}</p>
             {award.description ? (
               <p className="mt-3 text-sm leading-7 text-sepia-300">
                 {award.description}

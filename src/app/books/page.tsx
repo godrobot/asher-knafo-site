@@ -113,7 +113,7 @@ export default function BooksPage() {
                   {w.title}
                 </h3>
                 {w.author ? (
-                  <p className="mt-1 text-xs text-sepia-400">מאת {w.author}</p>
+                  <p className="mt-1 text-xs text-sepia-300">מאת {w.author}</p>
                 ) : null}
                 <p className="mt-3 text-sm leading-7 text-sepia-300">
                   <LinkedText text={w.description} rules={siteLinksExcept(`/books#${w.slug}`)} />

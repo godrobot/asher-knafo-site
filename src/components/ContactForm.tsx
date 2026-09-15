@@ -55,7 +55,7 @@ export default function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="card-panel p-8 text-center">
+      <div role="status" aria-live="polite" className="card-panel p-8 text-center">
         <p className="font-display text-xl font-bold text-gold-300">
           תודה רבה!
         </p>
@@ -140,7 +140,7 @@ export default function ContactForm() {
       </div>
 
       {status === "error" ? (
-        <p className="text-sm text-red-400">
+        <p role="alert" className="text-sm text-red-400">
           משהו השתבש בשליחה. אפשר לנסות שוב, או לפנות דרך עמוד הפייסבוק.
         </p>
       ) : null}

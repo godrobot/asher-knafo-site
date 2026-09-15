@@ -27,6 +27,9 @@ export default function PressModal({
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="press-modal-title"
         className="card-panel relative w-full max-w-xl p-6 sm:p-8"
         onClick={(e) => e.stopPropagation()}
       >
@@ -46,7 +49,10 @@ export default function PressModal({
             {article.date}
           </span>
         </div>
-        <h2 className="font-display mt-2 max-w-[calc(100%-3rem)] text-xl font-bold text-sepia-50 sm:text-2xl">
+        <h2
+          id="press-modal-title"
+          className="font-display mt-2 max-w-[calc(100%-3rem)] text-xl font-bold text-sepia-50 sm:text-2xl"
+        >
           {article.title}
         </h2>
 

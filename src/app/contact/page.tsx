@@ -54,7 +54,7 @@ export default function ContactPage() {
           expert for interview"). */}
       <section className="mt-14 border-t border-gold-400/15 pt-10 text-center">
         <p className="text-xs tracking-[0.3em] text-gold-400">לעיתונאים וחוקרים</p>
-        <h2 className="font-display mt-2 text-xl font-bold text-sepia-50">
+        <h2 lang="en" className="font-display mt-2 text-xl font-bold text-sepia-50">
           For Journalists &amp; Researchers
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-sm leading-7 text-sepia-300">
@@ -65,7 +65,8 @@ export default function ContactPage() {
         </p>
         <p
           dir="ltr"
-          className="mx-auto mt-3 max-w-xl text-sm leading-7 text-sepia-400"
+          lang="en"
+          className="mx-auto mt-3 max-w-xl text-sm leading-7 text-sepia-300"
         >
           Asher Knafo — a Moroccan Jewish heritage expert and independent
           researcher — is available for interviews and media inquiries on

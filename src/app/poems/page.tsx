@@ -47,7 +47,7 @@ export default function PoemsPage() {
                 {w.year}
               </span>
             </div>
-            <p className="mt-1 text-xs uppercase tracking-wide text-sepia-400">
+            <p className="mt-1 text-xs uppercase tracking-wide text-sepia-300">
               {w.kind}
               {w.author ? ` · ${w.author}` : ""}
             </p>
@@ -80,7 +80,7 @@ export default function PoemsPage() {
               <h3 className="font-display text-xl font-bold text-gold-200">
                 {p.title}
               </h3>
-              <p className="mt-1 text-xs uppercase tracking-wide text-sepia-400">
+              <p className="mt-1 text-xs uppercase tracking-wide text-sepia-300">
                 {p.author}
               </p>
               <p className="mt-5 font-display space-y-1 text-lg leading-10 text-sepia-100">
@@ -90,7 +90,7 @@ export default function PoemsPage() {
                   </span>
                 ))}
               </p>
-              <p className="mt-4 text-xs text-sepia-400">
+              <p className="mt-4 text-xs text-sepia-300">
                 <LinkedText text={p.context} rules={siteLinks} />
               </p>
             </blockquote>

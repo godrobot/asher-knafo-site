@@ -30,18 +30,18 @@ export default function Footer() {
           <div className="flex gap-6 text-xs">
             <Link
               href="/accessibility"
-              className="text-sepia-400 hover:text-gold-300"
+              className="text-sepia-300 hover:text-gold-300"
             >
               הצהרת נגישות
             </Link>
-            <Link href="/privacy" className="text-sepia-400 hover:text-gold-300">
+            <Link href="/privacy" className="text-sepia-300 hover:text-gold-300">
               מדיניות פרטיות
             </Link>
           </div>
-          <p className="mt-6 text-xs text-sepia-400">
+          <p className="mt-6 text-xs text-sepia-300">
             © {new Date().getFullYear()} אשר כנפו. כל הזכויות שמורות.
           </p>
-          <p className="text-[10px] text-sepia-500">
+          <p className="text-[10px] text-sepia-300">
             v{process.env.NEXT_PUBLIC_BUILD_VERSION || siteInfo.version}
           </p>
         </div>

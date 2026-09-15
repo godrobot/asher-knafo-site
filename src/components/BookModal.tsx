@@ -28,6 +28,9 @@ export default function BookModal({
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="book-modal-title"
         className="card-panel relative grid w-full max-w-2xl items-start gap-6 border-gold-400/30 p-8 sm:grid-cols-[144px_1fr] sm:p-10"
         onClick={(e) => e.stopPropagation()}
       >
@@ -49,10 +52,13 @@ export default function BookModal({
 
         <div>
           <p className="text-xs tracking-widest text-gold-400">{book.year}</p>
-          <h2 className="font-display mt-2 text-2xl font-bold text-sepia-50 sm:text-3xl">
+          <h2
+            id="book-modal-title"
+            className="font-display mt-2 text-2xl font-bold text-sepia-50 sm:text-3xl"
+          >
             {book.title}
           </h2>
-          <p className="mt-1 text-xs uppercase tracking-wide text-sepia-400">
+          <p className="mt-1 text-xs uppercase tracking-wide text-sepia-300">
             {book.genre}
           </p>
           <div className="zellige-divider my-6 sm:justify-start">
@@ -63,16 +69,16 @@ export default function BookModal({
           </p>
 
           {book.publisher || book.edition ? (
-            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-1 border-t border-gold-400/15 pt-4 text-sm text-sepia-400">
+            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-1 border-t border-gold-400/15 pt-4 text-sm text-sepia-300">
               {book.publisher ? (
                 <p>
-                  <span className="text-sepia-500">הוצאה: </span>
+                  <span className="text-sepia-300">הוצאה: </span>
                   {book.publisher}
                 </p>
               ) : null}
               {book.edition ? (
                 <p>
-                  <span className="text-sepia-500">מהדורות: </span>
+                  <span className="text-sepia-300">מהדורות: </span>
                   {book.edition}
                 </p>
               ) : null}
@@ -96,7 +102,7 @@ export default function BookModal({
                   <footer className="mt-2 text-xs tracking-wide text-gold-400">
                     {quote.author}
                     {quote.source ? (
-                      <span className="text-sepia-500"> · {quote.source}</span>
+                      <span className="text-sepia-300"> · {quote.source}</span>
                     ) : null}
                   </footer>
                 </blockquote>

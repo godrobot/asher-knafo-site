@@ -22,7 +22,7 @@ export default function BritArticles() {
             <h3 className="font-display mt-2 text-lg font-bold text-sepia-50 group-hover:text-gold-200">
               {article.title}
             </h3>
-            <p className="mt-1 text-sm text-sepia-400">מאת {article.author}</p>
+            <p className="mt-1 text-sm text-sepia-300">מאת {article.author}</p>
             <p className="mt-3 line-clamp-3 text-sm leading-7 text-sepia-300">
               {article.excerpt}
             </p>

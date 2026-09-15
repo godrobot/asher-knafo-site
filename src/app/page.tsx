@@ -97,7 +97,7 @@ export default function Home() {
         >
           הביוגרפיה המלאה ←
         </Link>
-        <p className="mx-auto mt-4 max-w-2xl text-sm text-sepia-400">
+        <p className="mx-auto mt-4 max-w-2xl text-sm text-sepia-300">
           קראו גם על{" "}
           <Link
             href="/poems"
@@ -139,7 +139,7 @@ export default function Home() {
                 <h3 className="font-display mt-3 text-xl font-bold text-sepia-50 group-hover:text-gold-200">
                   {book.title}
                 </h3>
-                <p className="mt-2 text-xs text-sepia-400">{book.genre}</p>
+                <p className="mt-2 text-xs text-sepia-300">{book.genre}</p>
                 <p className="mt-4 line-clamp-4 text-sm leading-7 text-sepia-300">
                   {book.description}
                 </p>
@@ -180,7 +180,7 @@ export default function Home() {
                 <h3 className="font-display mt-2 text-lg font-bold text-sepia-50">
                   {award.name}
                 </h3>
-                <p className="mt-1 text-sm text-sepia-400">{award.body}</p>
+                <p className="mt-1 text-sm text-sepia-300">{award.body}</p>
               </div>
             ))}
           </div>

@@ -59,7 +59,7 @@ export default function VideosList() {
                     <h3 className="font-display text-lg font-bold text-sepia-50 group-hover:text-gold-200">
                       {video.title}
                     </h3>
-                    <p className="mt-2 text-xs tracking-wide text-sepia-400">
+                    <p className="mt-2 text-xs tracking-wide text-sepia-300">
                       {video.channel}
                     </p>
                   </div>

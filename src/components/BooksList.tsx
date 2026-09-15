@@ -34,7 +34,7 @@ export default function BooksList() {
                   {book.year}
                 </span>
               </div>
-              <p className="mt-1 text-xs uppercase tracking-wide text-sepia-400">
+              <p className="mt-1 text-xs uppercase tracking-wide text-sepia-300">
                 {book.genre}
               </p>
               <p className="mt-4 line-clamp-3 text-base leading-8 text-sepia-200">
